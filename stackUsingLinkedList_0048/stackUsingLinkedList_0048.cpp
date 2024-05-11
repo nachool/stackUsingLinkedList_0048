@@ -54,12 +54,12 @@ public:
 		}
 		cout << endl;
 	}//return the value of the top node
-};
 
-//isempty operation: check if the stack is empty
-bool isEmpty() {
-	return top == NULL; //Return true if the top pointer is NULL, indicating an empty stack
-}
+	//isempty operation: check if the stack is empty
+	bool isEmpty() {
+		return top == NULL; //Return true if the top pointer is NULL, indicating an empty stack
+	}
+};
 
 int main()
 {
