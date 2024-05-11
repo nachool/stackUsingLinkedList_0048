@@ -41,7 +41,7 @@ public:
 		top = top->next; //update that top pointer to the next node
 	}
 
-	//peek/top opersastion: retrieve the value of the top most element without removing it
+	//peek/top operation: retrieve the value of the top most element without removing it
 	void peek() {
 		if (top == NULL) {
 			cout << "List is empty." << endl;
@@ -59,7 +59,6 @@ public:
 //isempty operation: check if the stack is empty
 bool isEmpty() {
 	return top == NULL; //Return true if the top pointer is NULL, indicating an empty stack
-
 }
 
 int main()
