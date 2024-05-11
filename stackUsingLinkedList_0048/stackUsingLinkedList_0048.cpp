@@ -21,6 +21,11 @@ public:
 	stack() {
 		top = NULL; //initialize the stack with a null top pointer
 	}
+
+	//push operation: insert an element onto the top of the stack
+	int push(int value) {
+		Node* newNode(); //1/ allocate memory for the new node
+	}
 };
 
 int main()
