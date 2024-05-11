@@ -24,7 +24,9 @@ public:
 
 	//push operation: insert an element onto the top of the stack
 	int push(int value) {
-		Node* newNode(); //1/ allocate memory for the new node
+		Node* newNode(); //1. allocate memory for the new node
+		newNode->data = value; //2. set the next pointer of the new node to the current top node
+
 	}
 };
 
