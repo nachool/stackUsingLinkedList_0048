@@ -38,14 +38,19 @@ public:
 			cout << "Stack is empty." << endl;
 		}
 		cout << "Popped value: " << top->data << endl;
-		top - top->next; //update that top pointer to the next node
+		top = top->next; //update that top pointer to the next node
 	}
 
 	//peek/top opersastion: retrieve the value of the top most element without removing it
 	void peek() {
 		if (top == NULL) {
 			cout << "List is empty." << endl;
-			current - current->next;
+		}
+		else {
+			Node* current = top;
+			while (current != NULL)
+				cout << current->data << " " << endl;
+			current = current->next;
 		}
 		cout << endl;
 	}//return the value of the top node
@@ -59,48 +64,52 @@ bool isEmpty() {
 
 int main()
 {
-	Stack stack;
+	stack stack;
 
 	int choice = 0;
 	int value;
 
-	while (choice != 5)
+	while (choice != 5) {
 		cout << "1. push\n";
-		cout << "2. pop\n";
-		cout << "3. peek\n";
-		cout << "4. exit\n"; 
-		cout << "enter your choice: ";
-		cin >> choice;
+	cout << "2. pop\n";
+	cout << "3. peek\n";
+	cout << "4. exit\n";
+	cout << "enter your choice: ";
+	cin >> choice;
 
-		switch (choice) {
-		case 1:
-			cout << "Enter your value to push: ";
-			cin >> value;
-			stack.push(value); //push the entered value onto the stack
-			break;
-		case 2:
-			if (!stack.isEmpty()) {
-				stack.pop(); // pop the top element from the stack
-			}
-			else {
-				cout << "stack is empty, cannot pop." << endl;
-			}
-			break;
-		case 3:
-			if (!stack.isEmpty()) {
-				stack.peek();//get the value of the top element
-			}
-			else {
-				cout << "stack is empty. no top value." << endl;
-			}
-			break;
-		case 4:
-			cout << "exiting program." << endl;
-			break;
-		default:
-			cout << "invalid choice. try again." << endl;
-			break;
+	switch (choice) {
+	case 1:
+		cout << "Enter your value to push: ";
+		cin >> value;
+		stack.push(value); //push the entered value onto the stack
+		break;
+	case 2:
+		if (!stack.isEmpty()) {
+			stack.pop(); // pop the top element from the stack
 		}
+		else {
+			cout << "stack is empty, cannot pop." << endl;
+		}
+		break;
+	case 3:
+		if (!stack.isEmpty()) {
+			stack.peek();//get the value of the top element
+		}
+		else {
+			cout << "stack is empty. no top value." << endl;
+		}
+		break;
+	case 4:
+		cout << "exiting program." << endl;
+		break;
+	default:
+		cout << "invalid choice. try again." << endl;
+		break;
+		}
+
+		cout << endl;
+	}
+	return 0;
 
 }
 
