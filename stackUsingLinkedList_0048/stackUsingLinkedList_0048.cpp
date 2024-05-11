@@ -32,9 +32,17 @@ public:
 		return value;
 	}
 
+	//pop operation: remove the topmost element from the stack
+	void pop() {
+
+	}
+
 	//peek/top opersastion: retrieve the value of the top most element without removing it
 	void peek() {
-
+		if (top == NULL) {
+			cout << "List is empty." << endl;
+			current - current->next;
+		}
 	}
 };
 
