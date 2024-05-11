@@ -34,7 +34,11 @@ public:
 
 	//pop operation: remove the topmost element from the stack
 	void pop() {
-
+		if (isEmpty()) {
+			cout << "Stack is empty." << endl;
+		}
+		cout << "Popped value: " << top->data << endl;
+		top - top->next; //update that top pointer to the next node
 	}
 
 	//peek/top opersastion: retrieve the value of the top most element without removing it
@@ -43,8 +47,15 @@ public:
 			cout << "List is empty." << endl;
 			current - current->next;
 		}
-	}
+		cout << endl;
+	}//return the value of the top node
 };
+
+//isempty operation: check if the stack is empty
+bool isEmpty() {
+	return top == NULL; //Return true if the top pointer is NULL, indicating an empty stack
+
+}
 
 int main()
 {
